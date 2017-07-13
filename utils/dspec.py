@@ -179,6 +179,7 @@ def plt_dspec(specfile=None, pol='I', dmin=None, dmax=None,
         tidx = np.where((tim >= timerange[0]) & (tim <= timerange[1]))[0]
     else:
         tidx = range(ntim)
+        print tidx
     if freqrange:
         fidx = np.where((freq >= freqrange[0] * 1e6) & (freq <= freqrange[1] * 1e6))[0]
     else:
