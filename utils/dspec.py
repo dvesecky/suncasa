@@ -159,6 +159,10 @@ def plt_dspec(specfile=None, pol='I', dmin=None, dmax=None,
     timestr: display time as strings on X-axis -- currently the times do not update themselves when zooming in
     """
     # Set up variables 
+    from sunpy import lightcurve
+    from sunpytime import Timrange
+    import numpy
+    from numpy import log10
     if pol != 'RR' and pol != 'LL' and pol != 'RRLL' and pol != 'I' and pol != 'V' and pol != 'IV':
         print "Please enter 'RR', 'LL', 'RRLL', 'I', 'V', 'IV' for pol"
         return 0
